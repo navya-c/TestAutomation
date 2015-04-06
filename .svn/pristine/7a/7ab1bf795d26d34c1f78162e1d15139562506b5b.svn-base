@@ -1,0 +1,52 @@
+package com.onelogin.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage 
+{
+	
+	WebDriver driver;
+	
+	public LoginPage(WebDriver d)
+	{
+		//Page Decoration
+		PageFactory.initElements(d,this);
+		this.driver=d;
+	}
+	
+	@FindBy(id="email")
+	private WebElement Usernametextbox;
+	
+	@FindBy(id="password")
+	private WebElement Passwordtextbox;
+	
+	@FindBy(id="login")
+	private WebElement Loginbutton;
+	
+	//LogOut
+	
+	@FindBy(css="li[class='dropdown']")
+	private WebElement DropdownClick;
+	
+	@FindBy(linkText="Log Out")
+	private WebElement LogoutClick;
+	
+	public void LoginExcelian(String username,String password)
+	{
+		System.out.println(username);
+		Usernametextbox.sendKeys(username);
+		Passwordtextbox.sendKeys(password);
+		Loginbutton.click();
+	}
+	
+	public void LogOutExcelian()
+	{
+		DropdownClick.click();
+		LogoutClick.click();
+		
+	}
+	
+}

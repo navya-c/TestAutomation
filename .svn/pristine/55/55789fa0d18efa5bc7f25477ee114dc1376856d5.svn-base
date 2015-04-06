@@ -1,0 +1,54 @@
+package com.onelogin.tests;
+
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import com.onelogin.libraries.ExcelLibrary;
+import com.onelogin.pages.LoginPage;
+
+public class LoginTest 
+{
+	
+	ExcelLibrary excellib=new ExcelLibrary();
+	WebDriver driver;
+	
+  @Test
+  public void Login() 
+  {
+	  
+	  String username = excellib.getExcelData("Login", 1, 0);
+	  String password = excellib.getExcelData("Login", 1, 1);
+	  
+	  LoginPage lp=new LoginPage(driver);
+	  lp.Login(username,password);
+  }
+  
+  @BeforeClass 
+  public void Launchbrowser()
+  {
+	  //Launch browser
+	  String browser=excellib.getExcelData("Config",1, 0);
+	  String Url=excellib.getExcelData("Config", 1, 1);
+	  
+	  if(browser.equals("chrome"))
+	  {
+		  System.setProperty("webdriver.chrome.driver","C:\\navya\\Selenium\\chromedriver.exe");
+		  driver = new ChromeDriver();
+	  }
+	  driver.get(Url);
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
+  }
+  
+  @AfterClass
+  public void Quit()
+  {
+	 // driver.quit();
+  }
+  
+}

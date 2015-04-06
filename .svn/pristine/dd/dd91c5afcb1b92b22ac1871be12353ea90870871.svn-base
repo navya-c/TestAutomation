@@ -1,0 +1,17 @@
+package com.onelogin.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class EnterTimeTrackPage extends LoginPage
+{
+	
+	public EnterTimeTrackPage(WebDriver d)
+	{
+		super(d);
+		PageFactory.initElements(d, this);
+		this.driver=d;
+	}
+	
+
+}

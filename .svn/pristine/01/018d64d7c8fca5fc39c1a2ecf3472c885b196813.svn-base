@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17080" started-at="2015-02-05T13:32:06Z" finished-at="2015-02-05T13:32:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17080" started-at="2015-02-05T13:32:06Z" finished-at="2015-02-05T13:32:23Z">
+      <class name="com.onelogin.tests.LoginTest">
+        <test-method status="PASS" signature="Launchbrowser()[pri:0, instance:com.onelogin.tests.LoginTest@4928ef7d]" name="Launchbrowser" is-config="true" duration-ms="15562" started-at="2015-02-05T19:02:06Z" finished-at="2015-02-05T19:02:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method status="PASS" signature="TestLogin()[pri:0, instance:com.onelogin.tests.LoginTest@4928ef7d]" name="TestLogin" duration-ms="361" started-at="2015-02-05T19:02:21Z" finished-at="2015-02-05T19:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLogin -->
+        <test-method status="PASS" signature="Quit()[pri:0, instance:com.onelogin.tests.LoginTest@4928ef7d]" name="Quit" is-config="true" duration-ms="1140" started-at="2015-02-05T19:02:22Z" finished-at="2015-02-05T19:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit -->
+      </class> <!-- com.onelogin.tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
